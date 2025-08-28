@@ -1,5 +1,13 @@
 @model MyMvcApp.Models.Item
 @{
+     var items = new List<string> {"item1" , "item2" , "item3" ,"item4"};
 }
 
-<p>Item is [ @Model.Name ]</p>
+<ul>
+    @foreach(var item in items)
+    {
+        <li>
+            @item
+        </li>
+    }
+</ul>
