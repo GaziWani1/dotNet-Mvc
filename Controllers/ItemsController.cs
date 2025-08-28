@@ -5,10 +5,14 @@ namespace MyMvcApp.Controllers
 {
     public class ItemsController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Overview()
         {
-            var item = new Item() { Id = 1 , Name = "Item One"};
+            var item = new Item() { Id = 1, Name = "key board" };
             return View(item);
+        }
+        public IActionResult Edit(int id)
+        {
+            return Content("Id =" + id);
         }
     }
 }
